@@ -112,7 +112,7 @@ public class Ejercicios {
             } 
         }
         ------------------------------------------------------------
-*/
+
         Scanner read = new Scanner(System.in);
         System.out.print("Introduce valor N : ");
         double v10a[] = new double[read.nextInt()];
@@ -120,14 +120,9 @@ public class Ejercicios {
             System.out.print("Introduce altura ");
             v10a[i] = read.nextDouble();
         }
-        double max=v10a[0], min=max, suma=min;
+        double max=v10a[0], min=max, suma=0;
         int altos=0, bajos= 0;
-        for (int i = 1; i < v10a.length; i++) {
-//            if (v10a[i]>v10a[i+1]) {
-//                max=v10a[i];
-//            } else {
-//                max=v10a[i+1];
-//            }
+        for (int i = 0; i < v10a.length; i++) {
             max=Math.max(v10a[i], max);
             min=Math.min(v10a[i], min);
             suma += v10a[i];
@@ -139,12 +134,51 @@ public class Ejercicios {
                 bajos++;
             } 
         }
-        
-            
-        
-        
+               
         System.out.println("La media es " + suma / v10a.length);
         System.out.println("El mayor es "+max + " y el menor es " + min);
         System.out.println("El numero de gente por encima de la media es "+altos + " y la de por debajo es " + bajos);
+        ------------------------------------------------------------
+
+   
+        int v11a[] = new int[100];
+        int v11b[] = new int[100];
+        System.out.print("Primer vector: ");
+        for (int i = 0; i < v11a.length ; i++){
+            v11a[i]= i +1;
+            System.out.print(v11a[i]+" ");
+        } System.out.println();
+        System.out.print("Segundo vector: ");
+        for (int i = 0; i < v11b.length; i++) {
+            v11b[i]= v11a[99-i];
+            System.out.print(v11b[i] + " ");
+        }
+        ------------------------------------------------------------
+*/
+        Scanner read = new Scanner(System.in);
+        int v12a[] = new int[10];
+        boolean salir = false ;
+        
+        
+        System.out.println("MENU PRINCIPAL");
+        System.out.println("a.  Mostrar valors ");
+        System.out.println("b. Introduir valor ");
+        System.out.println("c.  Eixir ");
+        
+        System.out.println();
+        
+        System.out.println("Elige opcion: ");
+        String respuesta = read.nextLine();
+        
+        switch ( respuesta) {
+                case "a" -> {
+                    for (int i = 0; i < v12a.length ; i++ ){
+                        System.out.print(v12a[i]+" ");
+                    } System.out.println();
+                }
+                case "b" -> salir = false;
+                case "c" -> salir = true;
+}
+
     }  
 }
