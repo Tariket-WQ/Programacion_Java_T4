@@ -3,6 +3,7 @@ package ejercicios;
 
 import java.util.Random; 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Ejercicios {
 
@@ -154,7 +155,7 @@ public class Ejercicios {
             System.out.print(v11b[i] + " ");
         }
         ------------------------------------------------------------
-*/
+
         Scanner read = new Scanner(System.in);
         int v12a[] = new int[10];
         boolean salir = false ;
@@ -178,7 +179,58 @@ public class Ejercicios {
                 }
                 case "b" -> salir = false;
                 case "c" -> salir = true;
-}
-
+        }
+        ------------------------------------------------------------
+        // Ejercicio 13
+        Scanner read = new Scanner(System.in);
+        System.out.print("Dime cuantos numeros quieres ver: ");
+        int numero = read.nextInt();
+        int Vector[] = new int[numero];
+        System.out.print("Dime numero inicial: ");
+        int numero_inicial = read.nextInt();
+        System.out.print("Dime cuanto quieres incrementar: ");
+        int incremento = read.nextInt();
+        
+            for (int i = 0; i < Vector.length; i++) {           
+            Vector[i] = numero_inicial+incremento*i;
+            }
+            for (int i = 0; i < Vector.length; i++) {           
+            System.out.println(Vector[i]);
+            }
+        ------------------------------------------------------------
+         // Ejercicio 14
+        Scanner read = new Scanner(System.in);
+        System.out.print("Dime N: ");
+        int N = read.nextInt();
+        int Vector[] = new int[N];
+        System.out.print("Dime M: ");
+        int M = read.nextInt();
+        Arrays.fill(Vector, M);
+        System.out.println(Arrays.toString(Vector));
+        ------------------------------------------------------------
+        */ // Ejercicio 16
+        Scanner read = new Scanner(System.in);
+        System.out.println("Dime 20 numeros: ");
+         int Vector[] = new int[5];
+         int Vector2[] = new int[5];
+        for (int i = 0; i < 10; i++) {
+            int N  = read.nextInt();
+            
+            if (i <5 ) {
+            
+            Vector[i] += N;   
+            } else {
+               Vector2[i-5] +=N;
+ 
+            }
+//        int Vector2[] = new int [N/2];
+//        Arrays.fill(Vector, N);
+//        System.out.println(Arrays.toString (Vector));
+        }System.out.println(Arrays.toString (Vector) + "\n" + Arrays.toString(Vector2));
+        Arrays.compare(Vector, Vector2);
+        if (false == Arrays.equals(Vector, Vector2)) {
+            System.out.println("False");
+        }
     }  
 }
+
