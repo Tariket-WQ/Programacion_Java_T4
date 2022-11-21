@@ -208,7 +208,7 @@ public class Ejercicios {
         Arrays.fill(Vector, M);
         System.out.println(Arrays.toString(Vector));
         ------------------------------------------------------------
-        */ // Ejercicio 16
+         // Ejercicio 16
         Scanner read = new Scanner(System.in);
         System.out.println("Dime 20 numeros: ");
          int Vector[] = new int[5];
@@ -230,7 +230,10 @@ public class Ejercicios {
         Arrays.compare(Vector, Vector2);
         if (false == Arrays.equals(Vector, Vector2)) {
             System.out.println("False");
-        }
+        }*/
+        String s1 = "Hola";
+        System.out.println(s1.replace('a','e'));
+        System.out.println(s1);
     }  
 }
 
