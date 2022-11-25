@@ -231,9 +231,7 @@ public class Ejercicios {
         if (false == Arrays.equals(Vector, Vector2)) {
             System.out.println("False");
         }*/
-        String s1 = "Hola";
-        System.out.println(s1.replace('a','e'));
-        System.out.println(s1);
+
     }  
 }
 
