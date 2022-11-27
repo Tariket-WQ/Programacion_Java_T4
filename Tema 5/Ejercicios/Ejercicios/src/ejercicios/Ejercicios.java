@@ -268,7 +268,7 @@ public class Ejercicios {
         System.out.println("Hay " + O + " O's" );
         System.out.println("Hay " + U + " U's");
         ------------------------------------------------------------
-        */
+        */       
     }  
 }
 
