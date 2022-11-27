@@ -210,30 +210,65 @@ public class Ejercicios {
         ------------------------------------------------------------
          // Ejercicio 16
         Scanner read = new Scanner(System.in);
-        System.out.println("Dime 20 numeros: ");
-         int Vector[] = new int[5];
-         int Vector2[] = new int[5];
-        for (int i = 0; i < 10; i++) {
+        System.out.print("Dime 20 numeros: ");
+        int Vector[] = new int[10];
+        int Vector2[] = new int[10];
+        for (int i = 0; i < 20; i++) {
             int N  = read.nextInt();
             
-            if (i <5 ) {
-            
+            if (i <10 ) {            
             Vector[i] += N;   
             } else {
-               Vector2[i-5] +=N;
- 
+            Vector2[i-10] +=N;
             }
-//        int Vector2[] = new int [N/2];
-//        Arrays.fill(Vector, N);
-//        System.out.println(Arrays.toString (Vector));
-        }System.out.println(Arrays.toString (Vector) + "\n" + Arrays.toString(Vector2));
-        Arrays.compare(Vector, Vector2);
-        if (false == Arrays.equals(Vector, Vector2)) {
-            System.out.println("False");
-        }*/
-        String s1 = "Hola";
-        System.out.println(s1.replace('a','e'));
-        System.out.println(s1);
+        }
+        System.out.println(Arrays.toString (Vector)  + "\n" + Arrays.toString(Vector2));      
+        
+        if (Arrays.equals(Vector, Vector2)) {
+            System.out.println("Son iguales");
+        } else{
+            System.out.println("No son iguales");
+        }
+        ------------------------------------------------------------
+        
+        Scanner read = new Scanner(System.in);
+        System.out.print("Dime una frase: ");
+        String frase = read.nextLine();
+        frase = frase.toLowerCase();
+        int A=0;
+        int E=0;
+        int I=0;
+        int O=0;
+        int U=0;
+        
+        for (int i = 0; i < frase.length(); i++) {
+            switch (frase.charAt(i)) { 
+                case 'a':              
+                A++;
+                break;
+               case 'e':
+               E++;
+               break;
+               case 'i':
+               I++;
+               break;
+               case 'o':
+               O++;
+               break;
+               case 'u':
+               U++;
+               break;
+            default:
+                break;   
+            }
+        }
+        System.out.println("Hay " + A + " A's");
+        System.out.println("Hay " + E + " E's");
+        System.out.println("Hay " + I + " I's");
+        System.out.println("Hay " + O + " O's" );
+        System.out.println("Hay " + U + " U's");
+        ------------------------------------------------------------
+        */
     }  
 }
 
