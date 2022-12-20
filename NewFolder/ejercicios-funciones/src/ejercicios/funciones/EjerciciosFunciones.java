@@ -64,13 +64,36 @@ public class EjerciciosFunciones {
         int b = read.nextInt();
         System.out.println("El perimetro es: " + perimetroRectangulo(a, b));
         System.out.println("El area es: " + areaRectangulo(a, b));
-------------------------------------------------------------------------      */
+------------------------------------------------------------------------      
         System.out.print("Introduce el N: ");
         int n = read.nextInt();
         System.out.println("El intermedio es: " + intermedio1aN(n));
         System.out.println("La suma es: " + suma1aN(n));
         System.out.println("El producto es: " + producto1aN(n));
-
+------------------------------------------------------------------------   NIVEL JEDI   
+        System.out.print("Introduce el primer numero: ");
+        int a = read.nextInt();
+        System.out.print("Introduce el segundo numero: ");
+        int b = read.nextInt();
+        System.out.print("Introduce el segundo numero: ");
+        int c = read.nextInt();
+        System.out.println("El mayor es " + mayor (a , mayor (b,c)));
+        ------------------------------------------------------------------------ 
+        System.out.print("Introduce el dia: ");
+        int day = read.nextInt();
+        System.out.print("Introduce el mes: ");
+        int month = read.nextInt();
+        System.out.print("Introduce el año: ");
+        int year = read.nextInt();
+        if(fecha(day , month , year)){
+            System.out.println("La fecha esta bien");
+        } else {
+            System.out.println("La fecha esta mal");
+        }
+        ------------------------------------------------------------------------ */
+        System.out.print("Introduce un numero: ");
+        int num = read.nextInt();
+        tabla_de_multiplicar(num);
     }
 
     public static double multiplica(double a, double b) {
@@ -121,30 +144,54 @@ public class EjerciciosFunciones {
     public static double areaRectangulo(double ancho, double alto) {
         return ancho * alto;
     }
-    
-    public static double intermedio1aN(int n) {    
-        double intermedio = n+1;
-        return intermedio/2 ;     
+
+    public static double intermedio1aN(int n) {
+        double intermedio = (n + 1) / 2;
+        return intermedio;
     }
-        public static int suma1aN(int n) {
-            int i = 1;
-            int suma=0;
-            do{
-            suma +=i; 
+
+    public static int suma1aN(int n) {
+        int i = 1;
+        int suma = 0;
+        do {
+            suma += i;
             i++;
-            }             
-            while (i <= n);
-        return suma ;
+        } while (i <= n);
+        return suma;
     }
-        public static int producto1aN(int n) {
-            int j = 1;
-            int multiplicacion = 1;
-            do{
-            multiplicacion = multiplicacion * j;   
+
+    public static int producto1aN(int n) {
+        int j = 1;
+        int multiplicacion = 1;
+        do {
+            multiplicacion *= j;
             j++;
-            }             
-            while (j <= n);
-        return multiplicacion ;
+        } while (j <= n);
+        return multiplicacion;
+    }
+
+    public static int mayor(int a, int b){
+        if (b>a){
+        a = b;
+       }
+        return a;
     }
     
+    public static boolean fecha(int a, int b, int c) {
+        if (31 > a && a > 0 && 13 > b && b > 0 && c >= 0) {
+                    return true;
+                } else {
+                    return false;
+        }
+    }
+    
+    public static void tabla_de_multiplicar (int a){
+    int i=0;
+    do{
+        i++;
+        System.out.printf("%2d x%3d =%7d \n",a,i,a*i);
+        
+    } while (i <10);
+    
+    }
 }
